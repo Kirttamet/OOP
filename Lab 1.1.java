@@ -1,22 +1,28 @@
-package lab1; // ใช้ package ชื่อ lab1 ตามที่ Eclipse แนะนำ
+package lab1;
 
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Lab 1.1: โปรแกรมบวกเลขจำนวนเต็ม 2 จำนวน.
+     */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // รับค่าจำนวนเต็มสองตัวจากผู้ใช้
-        int num1 = sc.nextInt();
-        int num2 = sc.nextInt();
-
-        // คำนวณผลบวก
-        int sum = num1 + num2;
-
-        // แสดงผลลัพธ์
-        System.out.println(sum);
         
-        // <<< เพิ่มบรรทัดนี้เพื่อปิด Scanner >>>
-        sc.close(); 
+        // 1. สร้างวัตถุ Scanner เพื่อรับข้อมูลจากคีย์บอร์ด
+        Scanner userInput = new Scanner(System.in); 
+
+        // 2. รับค่าจำนวนเต็มตัวที่หนึ่งและตัวที่สอง
+        // ใช้ชื่อตัวแปรที่ไม่ซ้ำ: valueA, valueB
+        int valueA = userInput.nextInt();
+        int valueB = userInput.nextInt();
+
+        // 3. คำนวณผลรวมของทั้งสองจำนวน
+        int resultTotal = valueA + valueB;
+
+        // 4. แสดงผลลัพธ์ออกทางหน้าจอ
+        System.out.println(resultTotal);
+        
+        // 5. ปิด Scanner
+        userInput.close(); 
     }
 }
